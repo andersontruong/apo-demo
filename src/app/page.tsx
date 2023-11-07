@@ -147,18 +147,18 @@ export default function Home() {
           <PhotoCard text="Be a Friend." src="/photos/DSC_0566.jpg" reverse/>
           <PhotoCard text="Be of Service." src="/photos/Image-10-15-23-at-12.47-AM-768x526.jpg"/>
         </div>
-        <div className="lg:bg-fixed bg-center bg-cover w-full h-[80vh] shadow-xl flex items-center justify-center" style={{ backgroundImage: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/photos/16112631_10209655996450121_3350485954191932056_o.jpg")', backgroundRepeat: 'no-repeat'}}>
+        <div className="lg:bg-fixed bg-center bg-cover w-full lg:h-[80vh] shadow-xl flex items-center justify-center" style={{ backgroundImage: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/photos/16112631_10209655996450121_3350485954191932056_o.jpg")', backgroundRepeat: 'no-repeat'}}>
           <div className="flex flex-col justify-center items-center p-10 lg:p-20 min-h-full lg:min-h-0 bg-black bg-opacity-50 lg:rounded-2xl space-y-5 text-center">
             <FaQuoteRight className="text-4xl text-white"/>
-            <p className="text-2xl text-white">
+            <p className="text-xl lg:text-2xl text-white">
               We cannot build our own future without helping others build theirs.
             </p>
             <div className="space-y-2">
-              <h1 className={`text-3xl text-white ${abril.className}`}>
+              <h1 className={`text-2xl lg:text-3xl text-white ${abril.className}`}>
                 William “Bill” Clinton
               </h1>
-              <p className='text-2xl text-white'>
-                Mu Alpha '67 Past President of the United States of America
+              <p className='text-lg lg:text-xl text-white'>
+                Mu Alpha '67 Former President of the United States of America
               </p>
             </div>
           </div>
