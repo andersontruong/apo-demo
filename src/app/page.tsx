@@ -70,7 +70,7 @@ function ValueCard({ Icon, title, desc, iconColor, underlineColor }: { Icon: any
 
   return (
     <div className="flex flex-col items-center text-center space-y-5 group">
-      <Icon className={`text-6xl text-white transition ease-in-out delay-50 duration-300 group-hover:drop-shadow-2xl group-hover:scale-125 ${iconColor}`}/>
+      <Icon className={`text-6xl text-white transition ease-in-out delay-50 duration-300 lg:group-hover:drop-shadow-2xl group-hover:scale-125 ${iconColor}`}/>
       <h1 className={`text-2xl lg:text-4xl text-white transition ease-in-out delay-50 duration-300 border-b-8 border-transparent drop-shadow-2xl ${underlineColor}`}>
         {title}
       </h1>
@@ -109,7 +109,7 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        <div className="w-full relative bottom-[10vh] xl:bottom-56 z-0 -mb-[200px] xl:-mb-[300px]">
+        <div className="w-full relative bottom-20 md:bottom-32 xl:bottom-56 z-0 -mb-[200px] xl:-mb-[300px]">
           <img className="h-full w-full" src="/wave_top.svg"/>
           <div className="flex flex-col items-center p-10 lg:p-20 xl:px-40 bg-[#99B2DD] space-y-10 lg:space-y-24">
             <h1 className={`text-center text-4xl lg:text-6xl drop-shadow-xl text-white ${abril.className}`}>
