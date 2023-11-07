@@ -71,10 +71,10 @@ function ValueCard({ Icon, title, desc, iconColor, underlineColor }: { Icon: any
   return (
     <div className="flex flex-col items-center text-center space-y-5 group">
       <Icon className={`text-6xl text-white transition ease-in-out delay-50 duration-300 group-hover:drop-shadow-2xl group-hover:scale-125 ${iconColor}`}/>
-      <h1 className={`text-4xl text-white transition ease-in-out delay-50 duration-300 border-b-8 border-transparent drop-shadow-2xl ${underlineColor}`}>
+      <h1 className={`text-2xl lg:text-4xl text-white transition ease-in-out delay-50 duration-300 border-b-8 border-transparent drop-shadow-2xl ${underlineColor}`}>
         {title}
       </h1>
-      <p className="text-2xl text-white drop-shadow-xl">
+      <p className="text-lg lg:text-2xl text-white drop-shadow-xl">
         {desc}
       </p>
     </div>
@@ -87,7 +87,7 @@ function PhotoCard({ src, text, reverse=false, className='' }: { src: string, te
       <h1 className="text-center lg:text-start text-4xl group-hover:before:scale-x-100 group-hover:before:origin-left relative before:w-full before:h-2 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-[#4774C2] before:absolute before:left-0 before:-bottom-1">
         {text}
       </h1>
-      <div className={`bg-white p-4 shrink w-full md:w-3/5 xl:w-2/5 peer ${reverse ? "shadow-[24px_24px_50px_1px_rgba(0,0,0,0.25)]" : "shadow-[-24px_24px_50px_1px_rgba(0,0,0,0.25)]"} rounded-2xl group-hover:scale-110 group-hover:z-40 z-0 transition ease-in-out delay-50 duration-300`}>
+      <div className={`bg-white p-2 lg:p-4 shrink w-full md:w-3/5 xl:w-2/5 peer ${reverse ? "shadow-[24px_24px_50px_1px_rgba(0,0,0,0.25)]" : "shadow-[-24px_24px_50px_1px_rgba(0,0,0,0.25)]"} rounded-2xl group-hover:scale-110 group-hover:z-40 z-0 transition ease-in-out delay-50 duration-300`}>
         <img src={src} className="rounded-xl"/>
       </div>
     </div>
@@ -109,9 +109,9 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        <div className="w-full relative bottom-32 xl:bottom-56 z-0 -mb-[200px] xl:-mb-[300px]">
+        <div className="w-full relative bottom-[10vh] xl:bottom-56 z-0 -mb-[200px] xl:-mb-[300px]">
           <img className="h-full w-full" src="/wave_top.svg"/>
-          <div className="flex flex-col items-center p-10 lg:p-20 xl:px-40 bg-[#99B2DD] space-y-24">
+          <div className="flex flex-col items-center p-10 lg:p-20 xl:px-40 bg-[#99B2DD] space-y-10 lg:space-y-24">
             <h1 className={`text-center text-4xl lg:text-6xl drop-shadow-xl text-white ${abril.className}`}>
               OUR VALUES
             </h1>
@@ -142,7 +142,7 @@ export default function Home() {
           </div>
           <img src="/wave_bottom.svg"/>
         </div>
-        <div className="flex flex-col pt-40 pb-20 xl:py-30 p-10 space-y-16">
+        <div className="flex flex-col pt-48 pb-20 xl:py-30 p-10 space-y-16">
           <PhotoCard text="Be a Leader." src="/photos/DSC_0822.jpg"/>
           <PhotoCard text="Be a Friend." src="/photos/DSC_0566.jpg" reverse/>
           <PhotoCard text="Be of Service." src="/photos/Image-10-15-23-at-12.47-AM-768x526.jpg"/>
@@ -188,13 +188,13 @@ export default function Home() {
             Follow Us
           </h1>
           <div className="flex justify-center space-x-10">
-            <div className="rounded-full bg-blue-100 p-3">
+            <div className="rounded-full bg-blue-100 p-3 drop-shadow-lg">
               <FaFacebookF className="text-4xl text-blue-600"/>
             </div>
-            <div className="rounded-full bg-blue-100 p-3">
+            <div className="rounded-full bg-blue-100 p-3 drop-shadow-lg">
               <FaInstagram className="text-4xl text-orange-600"/>
             </div>
-            <div className="rounded-full bg-blue-100 p-3">
+            <div className="rounded-full bg-blue-100 p-3 drop-shadow-lg">
               <FaYoutube className="text-4xl text-red-600"/>
             </div>
           </div>
