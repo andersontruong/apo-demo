@@ -96,23 +96,23 @@ function PhotoCard({ src, text, reverse=false, className='' }: { src: string, te
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex w-full min-h-screen flex-col items-center justify-between">
       <Navbar/>
       <div className="flex flex-col items-center w-full min-h-screen">
         <div className="lg:bg-fixed bg-center bg-cover w-full h-[80vh] shadow-xl flex items-center justify-center" style={{ backgroundImage: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/photos/3H-UCLA-Tour.jpg")', backgroundRepeat: 'no-repeat'}}>
-          <div className="flex flex-col lg:w-3/4 xl:w-2/3 p-20 items-center justify-center space-y-5 rounded-3x text-center">
-            <h1 className={`text-6xl text-white drop-shadow-2xl ${abril.className}`}>
+          <div className="flex flex-col lg:w-3/4 xl:w-2/3 lg:p-20 items-center justify-center space-y-5 rounded-3x text-center">
+            <h1 className={`text-5xl lg:text-6xl text-white drop-shadow-2xl ${abril.className}`}>
               Alpha Phi Omega
             </h1>
-            <h1 className={`text-3xl text-white drop-shadow-2xl`}>
+            <h1 className={`text-2xl lg:text-3xl text-white drop-shadow-2xl`}>
               Community Service-Based Fraternity at UCLA
             </h1>
           </div>
         </div>
-        <div className="relative bottom-32 xl:bottom-56 z-0 -mb-[200px] xl:-mb-[300px]">
-          <img src="/wave_top.svg"/>
-          <div className="flex flex-col items-center p-20 xl:px-40 bg-[#99B2DD] space-y-24">
-            <h1 className={`text-center text-6xl drop-shadow-xl text-white ${abril.className}`}>
+        <div className="w-full relative bottom-32 xl:bottom-56 z-0 -mb-[200px] xl:-mb-[300px]">
+          <img className="h-full w-full" src="/wave_top.svg"/>
+          <div className="flex flex-col items-center p-10 lg:p-20 xl:px-40 bg-[#99B2DD] space-y-24">
+            <h1 className={`text-center text-4xl lg:text-6xl drop-shadow-xl text-white ${abril.className}`}>
               OUR VALUES
             </h1>
             <div className="flex flex-col xl:flex-row items-center justify-around space-y-20 xl:space-y-0 xl:[&>*]:w-1/4">
@@ -169,7 +169,7 @@ export default function Home() {
             Message From Our President
           </h1>
           <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-10 space-y-10">
-            <div className="space-y-4 lg:space-y-10 w-4/5 xl:w-3/5">
+            <div className="space-y-4 lg:space-y-10 md:w-4/5 xl:w-3/5">
               <h1 className="text-lg lg:text-xl">
                 Alpha Phi Omega's Chi Chapter at UCLA welcomes anyone and everyone who is interested in participating in community service. Through our chapter events and programs, we aim to create conscientious leaders, develop impactful friendships, and contribute meaningful service to various communities and causes. Our hope is that our members can grow professionally and introspectively as a result of their time in our fraternity, and that they carry the lessons they learn here as they find their place in the world. Our Executive Committee is excited to welcome you this term and thanks you for your interest in the Chi Chapter of APO. We hope to see you at future events!
               </h1>
@@ -199,7 +199,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <p className="p-10 text-center text-lg xl:text-xl">
+        <p className="px-10 text-center text-lg xl:text-xl">
             © All Copyright Reserved | Alpha Phi Omega - University of California, Los Angeles
           </p>
       </footer>
