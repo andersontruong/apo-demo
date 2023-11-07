@@ -115,7 +115,7 @@ export default function Home() {
             <h1 className={`text-center text-4xl lg:text-6xl drop-shadow-xl text-white ${abril.className}`}>
               OUR VALUES
             </h1>
-            <div className="flex flex-col xl:flex-row items-center justify-around space-y-20 xl:space-y-0 xl:[&>*]:w-1/4">
+            <div className="flex flex-col xl:flex-row items-center lg:items-start justify-around space-y-20 xl:space-y-0 xl:[&>*]:w-1/4">
               <ValueCard 
                 Icon={FaGraduationCap} 
                 title="Leadership" 
