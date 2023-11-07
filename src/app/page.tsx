@@ -58,7 +58,7 @@ function Navbar() {
         <Link href="/" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
           Contact Us
         </Link>
-        <Link href="/" className="text-white p-3 bg-blue-300 rounded-2xl hover:bg-blue-600 transition ease-in-out delay-50 duration-200">
+        <Link href="/" className="text-white px-3 py-2 bg-blue-300 rounded-2xl hover:bg-blue-600 transition ease-in-out delay-50 duration-200">
           Login
         </Link>
       </div>
