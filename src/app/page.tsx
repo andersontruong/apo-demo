@@ -109,7 +109,7 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        <div className="w-full relative bottom-20 md:bottom-32 xl:bottom-56 z-0 -mb-[200px] xl:-mb-[300px]">
+        <div className="w-full relative bottom-20 md:bottom-32 lg:bottom-36 xl:bottom-48 z-0 -mb-[200px] xl:-mb-[300px]">
           <img className="h-full w-full" src="/wave_top.svg"/>
           <div className="flex flex-col items-center p-10 lg:p-20 xl:px-40 bg-[#99B2DD] space-y-10 lg:space-y-24">
             <h1 className={`text-center text-4xl lg:text-6xl drop-shadow-xl text-white ${abril.className}`}>
