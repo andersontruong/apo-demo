@@ -99,7 +99,7 @@ export default function Home() {
     <main className="flex w-full min-h-screen flex-col items-center justify-between">
       <Navbar/>
       <div className="flex flex-col items-center w-full min-h-screen">
-        <div className="lg:bg-fixed bg-center bg-cover w-full h-[80vh] shadow-xl flex items-center justify-center" style={{ backgroundImage: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/photos/3H-UCLA-Tour.jpg")', backgroundRepeat: 'no-repeat'}}>
+        <div className="lg:bg-fixed bg-center bg-auto w-full h-[80vh] shadow-xl flex items-center justify-center" style={{ backgroundImage: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/photos/3H-UCLA-Tour.jpg")', backgroundRepeat: 'no-repeat'}}>
           <div className="flex flex-col lg:w-3/4 xl:w-2/3 lg:p-20 items-center justify-center space-y-5 rounded-3x text-center">
             <h1 className={`text-5xl lg:text-6xl text-white drop-shadow-2xl ${abril.className}`}>
               Alpha Phi Omega
