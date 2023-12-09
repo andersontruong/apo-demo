@@ -11,7 +11,8 @@ interface CalendarDate {
 }
 
 const EVENT_STYLE = {
-    'fel/Fellowship': 'bg-red-100 border border-red-500 hover:bg-red-200'
+    'fel/Fellowship': 'bg-orange-100 border border-orange-500 hover:bg-orange-200',
+    's/Service': 'bg-red-100 border border-red-500 hover:bg-red-200'
 }
 
 export default function CalendarGrid(events: any) {
@@ -80,34 +81,46 @@ export default function CalendarGrid(events: any) {
     
     return (
         <div>
-            <h1 className="text-center text-2xl">{dateFns.getYear(monthStart)}</h1>
-            <h1 className="mb-2 text-4xl text-center">{dateFns.format(monthStart, 'LLLL')}</h1>
-            <div className="flex justify-center items-center space-x-4 my-2">
-                <button onClick={() => { shiftMonth(-1); }}>
-                    <FaAngleLeft className="text-3xl"/>
-                </button>
-                <button onClick={() => { shiftMonth(1); }}>
-                    <FaAngleRight className="text-3xl"/>
-                </button>
+            <div className="flex flex-col my-4">
+                <h1 className="text-center text-2xl">{dateFns.getYear(monthStart)}</h1>
+                <h1 className="text-4xl text-center">{dateFns.format(monthStart, 'LLLL')}</h1>
+                <div className="flex justify-center items-center space-x-4 py-2">
+                    <button onClick={() => { shiftMonth(-1); }}>
+                        <FaAngleLeft className="text-3xl"/>
+                    </button>
+                    <button onClick={() => { shiftMonth(1); }}>
+                        <FaAngleRight className="text-3xl"/>
+                    </button>
+                </div>
             </div>
-            <div className="grid grid-cols-7 divide-x-2 divide-y-2 divide-neutral-200 text-start">
+            <div className="grid grid-cols-7 text-start shadow-xl">
                 {days.slice(0, 7).map((day, i) => 
-                    <div className="bg-green-100" key={i}>
+                    <div className={`bg-blue-100 border-neutral-200 border-t-[1px] border-r-[1px] ${i == 0 && 'border-l-[1px]'}`} key={i}>
                         <h1 className="text-center truncate">{dateFns.format(day.date, 'E')}</h1>
                     </div>
                 )}
                 {days.map((day, i) => 
                     {
                         const eventsOnDay = indexedEvents[day.date.toISOString()];
-                        return <div key={i} className={`overflow-hidden p-2 h-[100px] w-[200px] ${dateFns.isToday(day.date) ? 'bg-blue-100' : day.thisMonth ? 'bg-white' : 'bg-neutral-100'}`}>
-                            <h1>{dateFns.format(day.date, 'd')}</h1>
-                            { eventsOnDay?.map((event, j) => 
-                                    <h1 key={j} className={`truncate text-sm p-1 rounded-lg text-center ${EVENT_STYLE[event.type]}`}>
-                                        [{event.type.split('/')[0].toUpperCase()}] {event.title}
-                                    </h1>
-                                )
-                            }
-                        </div>
+                        return (
+                            <div key={i} 
+                                className={
+                                    `overflow-hidden p-2 h-[100px] w-[200px] 
+                                    ${dateFns.isToday(day.date) ? 'bg-purple-100 z-10 shadow-lg' : day.thisMonth ? 'bg-white' : 'bg-neutral-100'}
+                                    border-neutral-200 border-b-[1px] border-r-[1px]
+                                    ${i % 7 == 0 && 'border-l-[1px]'}
+                                    ${i < 7 && 'border-t-[1px]'}
+                                    `
+                                }>
+                                <h1>{dateFns.format(day.date, 'd')}</h1>
+                                { eventsOnDay?.map((event, j) => 
+                                        <h1 key={j} className={`truncate text-sm p-1 rounded-lg text-center ${EVENT_STYLE[event.type]}`}>
+                                            [{event.type.split('/')[0].toUpperCase()}] {event.title}
+                                        </h1>
+                                    )
+                                }
+                            </div>
+                        )
                     }
                 )}
             </div>
