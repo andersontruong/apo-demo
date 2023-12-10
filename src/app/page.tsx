@@ -1,70 +1,13 @@
 'use client'
 
 import { Abril_Fatface, Noto_Serif } from 'next/font/google'
-import Link from 'next/link'
 import { FaGraduationCap, FaHeart, FaEnvira, FaQuoteRight, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa6'
 import * as React from 'react'
+import Navbar from '@/components/Navbar'
 
 const noto = Noto_Serif({ weight: '500', subsets: ['latin'] });
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] });
 
-function Navbar() {
-  const [shadow, setShadow] = React.useState(false);
-  const [mobile, setMobile] = React.useState(false);
-
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setShadow(position > 150);
-  }
-
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
-    
-  return (
-    <header className={`flex w-full sticky top-0 items-center py-6 px-10 lg:px-20 xl:px-48 justify-between z-50 transition ease-in-out delay-50 duration-300 bg-white ${shadow ? 'shadow-xl' : ''}`}>
-      <Link className="hover:text-blue-500 flex items-center space-x-2"  href="/">
-        <img className="w-8" src="/Alpha_Phi_Omega.png" />
-        <div className="flex flex-col items-center -space-y-2">
-          <h1 className={`text-sm md:text-xl font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
-            Alpha Phi Omega
-          </h1>
-          <h1 className={`text-xs md:text-base font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
-            Chi Chapter
-          </h1>
-        </div>
-      </Link>
-      
-      <div className="flex md:hidden">
-          <button 
-            onClick={() => { setMobile(true); }}
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-            <span className="sr-only">Open main menu</span>
-            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-          </button>
-      </div>
-      <div className={`hidden md:flex items-center [&>*]:text-xl space-x-4 lg:space-x-10`} id="navbar-sticky">
-        <Link href="/" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
-          About Us
-        </Link>
-        <Link href="/" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
-          Rush
-        </Link>
-        <Link href="/" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
-          Contact Us
-        </Link>
-        <Link href="/" className="text-white px-3 py-2 bg-blue-300 rounded-2xl hover:bg-blue-600 transition ease-in-out delay-50 duration-200">
-          Login
-        </Link>
-      </div>
-    </header>
-  )
-}
 
 function ValueCard({ Icon, title, desc, iconColor, underlineColor }: { Icon: any, title: string, desc: string, iconColor?: string, underlineColor?: string}) {
 
@@ -87,7 +30,7 @@ function PhotoCard({ src, text, reverse=false, className='' }: { src: string, te
       <h1 className="text-center lg:text-start text-4xl group-hover:before:scale-x-100 group-hover:before:origin-left relative before:w-full before:h-2 before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-[#4774C2] before:absolute before:left-0 before:-bottom-1">
         {text}
       </h1>
-      <div className={`bg-white p-2 lg:p-4 shrink w-full md:w-3/5 xl:w-2/5 peer ${reverse ? "shadow-[24px_24px_50px_1px_rgba(0,0,0,0.25)]" : "shadow-[-24px_24px_50px_1px_rgba(0,0,0,0.25)]"} rounded-2xl group-hover:scale-110 group-hover:z-40 z-0 transition ease-in-out delay-50 duration-300`}>
+      <div className={`bg-white p-2 lg:p-4 shrink w-full md:w-3/5 xl:w-2/5 peer ${reverse ? "shadow-[24px_24px_50px_1px_rgba(0,0,0,0.25)]" : "shadow-[-24px_24px_50px_1px_rgba(0,0,0,0.25)]"} rounded-2xl group-hover:scale-110 group-hover:z-1 z-0 transition ease-in-out delay-50 duration-300`}>
         <img src={src} className="rounded-xl"/>
       </div>
     </div>
@@ -95,9 +38,10 @@ function PhotoCard({ src, text, reverse=false, className='' }: { src: string, te
 }
 
 export default function Home() {
+  
   return (
     <main className="flex w-full min-h-screen flex-col items-center justify-between">
-      <Navbar/>
+      <Navbar />
       <div className="flex flex-col items-center w-full min-h-screen">
         <div className="lg:bg-fixed bg-center bg-auto w-full h-[80vh] shadow-xl flex items-center justify-center" style={{ backgroundImage: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/photos/3H-UCLA-Tour.jpg")', backgroundRepeat: 'no-repeat'}}>
           <div className="flex flex-col lg:w-3/4 xl:w-2/3 lg:p-20 items-center justify-center space-y-5 rounded-3x text-center">

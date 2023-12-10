@@ -11,7 +11,7 @@ export default function UserNavbar() {
     const [mobile, setMobile] = React.useState(false);
       
     return (
-      <header className={`flex w-full sticky top-0 items-center py-6 px-10 lg:px-20 xl:px-48 justify-between z-50 transition ease-in-out delay-50 duration-300 bg-white shadow`}>
+      <header className={`flex w-full h-[80px] sticky top-0 items-center py-6 px-10 lg:px-20 xl:px-48 justify-between z-50 transition ease-in-out delay-50 duration-300 bg-white shadow`}>
         <Link className="hover:text-blue-500 flex items-center space-x-2"  href="/">
           <img className="w-8" src="/Alpha_Phi_Omega.png" />
           <div className="flex flex-col items-center -space-y-2">
