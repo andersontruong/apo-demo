@@ -15,10 +15,10 @@ export default function UserNavbar() {
         <Link className="hover:text-blue-500 flex items-center space-x-2"  href="/">
           <img className="w-8" src="/Alpha_Phi_Omega.png" />
           <div className="flex flex-col items-center -space-y-2">
-            <h1 className={`text-xl font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
+            <h1 className={`text-sm md:text-xl font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
               Alpha Phi Omega
             </h1>
-            <h1 className={`text-base font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
+            <h1 className={`text-xs md:text-base font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
               Chi Chapter
             </h1>
           </div>

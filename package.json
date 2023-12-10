@@ -12,6 +12,7 @@
     "contentful": "^10.6.14",
     "contentful-management": "^11.6.1",
     "date-fns": "^2.30.0",
+    "firebase": "^10.7.1",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",

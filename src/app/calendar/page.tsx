@@ -32,9 +32,9 @@ export default function Home() {
     // );
 
     return (
-        <main className="flex w-full min-h-screen flex-col items-center justify-between">
+        <main className="flex flex-col w-full min-h-screen items-center">
             <UserNavbar />
-            <div className="flex flex-col items-center w-full min-h-screen bg-neutral-100">
+            <div className="flex flex-col items-center w-full bg-neutral-100">
                 <Calendar />
             </div>
         </main>
