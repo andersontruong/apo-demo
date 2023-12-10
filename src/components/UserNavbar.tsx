@@ -35,21 +35,18 @@ export default function UserNavbar() {
             </button>
         </div>
         <div className={`hidden md:flex items-center [&>*]:text-lg space-x-4 lg:space-x-10`} id="navbar-sticky">
-          <Link href="/" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
+          <Link href="/" className="mt-1 transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
             Calendar
           </Link>
-          <Link href="/" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
+          <Link href="/" className="mt-1 transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
             Links
           </Link>
-          <Link href="/" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
+          <Link href="/" className="mt-1 transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
             Contact Us
           </Link>
           <Link href="/home" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent">
             <FaCircleUser className="text-3xl text-blue-400 hover:text-blue-500 hover:drop-shadow-xltransition ease-in-out delay-30 duration-200"/>
           </Link>
-          {/* <Link href="/" className="text-white px-3 py-2 bg-blue-300 rounded-2xl hover:bg-blue-600 transition ease-in-out delay-50 duration-200">
-            <FaCircleUser />
-          </Link> */}
         </div>
       </header>
     )

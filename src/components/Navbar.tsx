@@ -28,13 +28,13 @@ export default function Navbar() {
     return (
     <>
     <header className={`flex w-full h-[70px] sticky top-0 items-center py-6 px-10 lg:px-20  justify-between z-10 transition ease-in-out delay-50 duration-300 bg-white ${shadow ? 'shadow-xl' : ''}`}>
-        <Link className="group flex items-center space-x-2"  href="/">
+        <Link className="hover:text-blue-500 flex items-center space-x-2"  href="/">
           <img className="w-8" src="/Alpha_Phi_Omega.png" />
           <div className="flex flex-col items-center -space-y-2">
-            <h1 className={`drop-shadow-xl text-sm md:text-base text-black font-medium transition ease-in-out delay-50 duration-300 group-hover:text-neutral-500 ${abril.className}`}>
+            <h1 className={`drop-shadow-xl text-sm md:text-base font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
               Alpha Phi Omega
             </h1>
-            <h1 className={`drop-shadow-xl text-xs md:text-sm text-black font-medium transition ease-in-out delay-50 duration-300 group-hover:text-neutral-500 ${abril.className}`}>
+            <h1 className={`drop-shadow-xl text-xs md:text-sm font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
               Chi Chapter
             </h1>
           </div>

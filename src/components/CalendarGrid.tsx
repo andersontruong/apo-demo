@@ -81,8 +81,8 @@ export default function CalendarGrid(events: any) {
     }, [events]);
     
     return (
-        <div ref={calendarRef} className="flex flex-col items-center w-full">
-            <div className="flex flex-col my-4">
+        <div ref={calendarRef} className="flex flex-col items-center w-full mb-16">
+            <div className="flex flex-col my-4 w-full">
                 <h1 className="text-xl md:text-2xl text-center">{dateFns.getYear(monthStart)}</h1>
                 <h1 className="text-2xl md:text-4xl text-center">{dateFns.format(monthStart, 'LLLL')}</h1>
                 <div className="flex justify-center items-center space-x-10 pt-4 pb-2 w-full">
@@ -97,7 +97,9 @@ export default function CalendarGrid(events: any) {
             <div className="grid grid-cols-7 text-start shadow-xl w-full md:w-4/5">
                 {days.slice(0, 7).map((day, i) => 
                     <div className={`bg-blue-100 border-neutral-200 border-t-[1px] border-r-[1px] ${i == 0 && 'border-l-[1px]'}`} key={i}>
-                        <h1 className="text-center truncate text-xs md:text-base">{dateFns.format(day.date, 'E')}</h1>
+                        <h1 className="text-center truncate text-xs md:text-base">
+                            {dateFns.format(day.date, 'E')}
+                        </h1>
                     </div>
                 )}
                 {days.map((day, i) => 
