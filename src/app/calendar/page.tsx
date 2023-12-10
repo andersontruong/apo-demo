@@ -34,7 +34,7 @@ export default function Home() {
     return (
         <main className="flex flex-col w-full min-h-screen items-center">
             <UserNavbar />
-            <div className="flex flex-col items-center w-full bg-neutral-100">
+            <div className="grow flex flex-col items-center w-full bg-neutral-100">
                 <Calendar />
             </div>
         </main>
