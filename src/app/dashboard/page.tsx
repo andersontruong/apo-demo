@@ -25,20 +25,20 @@ export default function Dashboard() {
         <main className="flex flex-col w-full min-h-screen items-center">
             <UserNavbar />
             <div className="grow flex flex-col items-center w-full py-10 bg-neutral-100">
-                <h1 className={`text-4xl`}>
+                <h1 className={`text-2xl md:text-3xl lg:text-4xl`}>
                     Hello, Thane Cooley!
                 </h1>
-                <div className="flex space-x-8 mt-4 text-center px-4 z-10">
+                <div className="flex space-x-8 mt-4 text-center px-4 z-10 text-sm md:text-base">
                     <h1 className="hover:cursor-pointer text-neutral-700 mt-1 pb-3 transition ease-in-out delay-50 duration-300 border-b-4 border-transparent hover:border-blue-700">My Events</h1>
                     <h1 className="hover:cursor-pointer text-neutral-700 mt-1 pb-3 transition ease-in-out delay-50 duration-300 border-b-4 border-transparent hover:border-blue-700">My Calendar</h1>
                     <h1 className="hover:cursor-pointer text-neutral-700 mt-1 pb-3 transition ease-in-out delay-50 duration-300 border-b-4 border-transparent hover:border-blue-700">ExComm</h1>
                 </div>
-                <span className="border-t-2 border-neutral-300 w-1/4 -mt-[3px] z-0"></span>
+                <span className="border-t-2 border-neutral-300 w-4/5 sm:w-1/2 lg:w-1/4 -mt-[3px] z-0"></span>
                 <div className="mt-4 bg-white w-3/4 grow shadow-lg rounded-xl p-4">
-                    <div className="flex justify-evenly w-full">
+                    <div className="grid md:grid-cols-3 lg:grid-cols-5 w-full">
                         <EventsWidget
                             title="Service"
-                            className="w-1/6"
+                            className=""
                         >
                             <EventEntry 
                                 name="Beach Cleanup" 
@@ -53,7 +53,7 @@ export default function Dashboard() {
                         </EventsWidget>
                         <EventsWidget
                             title="Fellowship"
-                            className="w-1/6"
+                            className=""
                         >
                             <EventEntry 
                                 name="Karaoke Night at Eugene's" 
@@ -68,7 +68,7 @@ export default function Dashboard() {
                         </EventsWidget>
                         <EventsWidget
                             title="Fundraiser"
-                            className="w-1/6"
+                            className=""
                         >
                             <EventEntry 
                                 name="Porto's" 
@@ -83,7 +83,7 @@ export default function Dashboard() {
                         </EventsWidget>
                         <EventsWidget
                             title="Family"
-                            className="w-1/6"
+                            className=""
                         >
                             <EventEntry 
                                 name="KBBQ with Alphas" 
@@ -103,7 +103,7 @@ export default function Dashboard() {
                         </EventsWidget>
                         <EventsWidget
                             title="Leadership/Meetings"
-                            className="w-1/6"
+                            className=""
                         >
                             <EventEntry 
                                 name="PM 9" 

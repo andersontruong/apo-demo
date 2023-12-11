@@ -9,7 +9,7 @@ const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] });
 
 export default function UserNavbar() {
     const [mobile, setMobile] = React.useState(false);
-      
+    
     return (
       <header className={`flex w-full h-[70px] sticky top-0 items-center py-6 px-10 lg:px-20 justify-between z-50 transition ease-in-out delay-50 duration-300 bg-white shadow`}>
         <Link className="hover:text-blue-500 flex items-center space-x-2"  href="/">
@@ -35,8 +35,8 @@ export default function UserNavbar() {
             </button>
         </div>
         <div className={`hidden md:flex items-center [&>*]:text-lg space-x-4 lg:space-x-10`} id="navbar-sticky">
-          <Link href="/" className="mt-1 transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
-            Calendar
+          <Link href="/dashboard" className="mt-1 transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
+            Dashboard
           </Link>
           <Link href="/" className="mt-1 transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
             Links
@@ -44,7 +44,7 @@ export default function UserNavbar() {
           <Link href="/" className="mt-1 transition ease-in-out delay-50 duration-200 border-b-4 border-transparent hover:border-black">
             Contact Us
           </Link>
-          <Link href="/home" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent">
+          <Link href="/" className="transition ease-in-out delay-50 duration-200 border-b-4 border-transparent">
             <FaCircleUser className="text-3xl text-blue-400 hover:text-blue-500 hover:drop-shadow-xltransition ease-in-out delay-30 duration-200"/>
           </Link>
         </div>
