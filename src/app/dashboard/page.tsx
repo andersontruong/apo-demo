@@ -28,13 +28,13 @@ export default function Dashboard() {
                 <h1 className={`text-2xl md:text-3xl lg:text-4xl`}>
                     Hello, Thane Cooley!
                 </h1>
-                <div className="flex space-x-4 md:space-x-8 mt-4 text-center px-2 z-10 text-sm md:text-base w-full justify-center">
+                <div className="flex space-x-4 md:space-x-8 mt-4 text-center z-10 text-sm md:text-base w-full justify-center">
                     <h1 className="hover:cursor-pointer text-neutral-700 mt-1 pb-3 transition ease-in-out delay-50 duration-300 border-b-4 border-transparent hover:border-blue-700">My Events</h1>
                     <h1 className="hover:cursor-pointer text-neutral-700 mt-1 pb-3 transition ease-in-out delay-50 duration-300 border-b-4 border-transparent hover:border-blue-700">My Calendar</h1>
                     <h1 className="hover:cursor-pointer text-neutral-700 mt-1 pb-3 transition ease-in-out delay-50 duration-300 border-b-4 border-transparent hover:border-blue-700">Upcoming</h1>
                     <h1 className="hover:cursor-pointer text-neutral-700 mt-1 pb-3 transition ease-in-out delay-50 duration-300 border-b-4 border-transparent hover:border-blue-700">ExComm</h1>
                 </div>
-                <span className="border-t-2 border-neutral-300 w-3/4 -mt-[3px] z-0"></span>
+                <span className="border-t-2 border-neutral-300 w-5/6 sm:w-3/4 -mt-[3px] z-0"></span>
                 <div className="mt-4 bg-white w-3/4 grow shadow-lg rounded-xl p-4">
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:gap-4 w-full justify-items-center">
                         <EventsWidget
