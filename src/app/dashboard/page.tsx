@@ -39,7 +39,7 @@ export default function Dashboard() {
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:gap-4 w-full justify-items-center">
                         <EventsWidget
                             title="Service"
-                            className="w-3/5 sm:w-4/5 md:w-full lg:w-4/5"
+                            className="max-w-[200px] w-5/6 sm:w-4/5 md:w-full lg:w-4/5"
                         >
                             <EventEntry 
                                 name="Beach Cleanup" 
@@ -54,7 +54,7 @@ export default function Dashboard() {
                         </EventsWidget>
                         <EventsWidget
                             title="Fellowship"
-                            className="w-3/5 sm:w-4/5 md:w-full lg:w-4/5"
+                            className="max-w-[200px] w-5/6 sm:w-4/5 md:w-full lg:w-4/5"
                         >
                             <EventEntry 
                                 name="Karaoke Night at Eugene's" 
@@ -69,7 +69,7 @@ export default function Dashboard() {
                         </EventsWidget>
                         <EventsWidget
                             title="Fundraiser"
-                            className="w-3/5 sm:w-4/5 md:w-full lg:w-4/5"
+                            className="max-w-[200px] w-5/6 sm:w-4/5 md:w-full lg:w-4/5"
                         >
                             <EventEntry 
                                 name="Porto's" 
@@ -84,7 +84,7 @@ export default function Dashboard() {
                         </EventsWidget>
                         <EventsWidget
                             title="Family"
-                            className="w-3/5 sm:w-4/5 md:w-full lg:w-4/5"
+                            className="max-w-[200px] w-5/6 sm:w-4/5 md:w-full lg:w-4/5"
                         >
                             <EventEntry 
                                 name="KBBQ with Alphas" 
@@ -104,7 +104,7 @@ export default function Dashboard() {
                         </EventsWidget>
                         <EventsWidget
                             title="Leadership/Meetings"
-                            className="w-3/5 sm:w-4/5 md:w-full lg:w-4/5"
+                            className="max-w-[200px] w-5/6 sm:w-4/5 md:w-full lg:w-4/5"
                         >
                             <EventEntry 
                                 name="PM 9" 
