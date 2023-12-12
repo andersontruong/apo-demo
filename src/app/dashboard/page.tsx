@@ -22,7 +22,7 @@ function EventsWidget({ title, children, className="" } : { title: string, child
 
 export default function Dashboard() {
     return (
-        <main className="flex flex-col w-full min-h-screen items-center">
+        <main className="flex flex-col w-full h-screen items-center">
             <UserNavbar />
             <div className="grow flex flex-col items-center w-full py-10 bg-neutral-100">
                 <h1 className={`text-2xl md:text-3xl lg:text-4xl`}>

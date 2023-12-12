@@ -27,14 +27,14 @@ export default function Navbar() {
       
     return (
     <>
-    <header className={`flex w-full h-[70px] sticky top-0 items-center py-6 px-10 lg:px-20  justify-between z-10 transition ease-in-out delay-50 duration-300 bg-white ${shadow ? 'shadow-xl' : ''}`}>
+    <header className={`flex w-full h-[60px] sticky top-0 items-center py-6 px-10 lg:px-20  justify-between z-10 transition ease-in-out delay-50 duration-300 bg-white ${shadow ? 'shadow-xl' : ''}`}>
         <Link className="hover:text-blue-500 flex items-center space-x-2"  href="/">
           <img className="w-8" src="/Alpha_Phi_Omega.png" />
           <div className="flex flex-col items-center -space-y-2">
-            <h1 className={`drop-shadow-xl text-sm md:text-base font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
+            <h1 className={`drop-shadow-xl text-sm font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
               Alpha Phi Omega
             </h1>
-            <h1 className={`drop-shadow-xl text-xs md:text-sm font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
+            <h1 className={`drop-shadow-xl text-xs font-medium transition ease-in-out delay-50 duration-300 ${abril.className}`}>
               Chi Chapter
             </h1>
           </div>
@@ -46,7 +46,7 @@ export default function Navbar() {
               <FaBars />
             </button>
         </div>
-        <div className={`hidden md:flex items-center [&>*]:text-lg space-x-4 lg:space-x-10`} id="navbar-sticky">
+        <div className={`hidden md:flex items-center [&>*]:text-base space-x-4 lg:space-x-10`} id="navbar-sticky">
           <Link href="/" className="mt-1 transition ease-in-out delay-50 duration-200 border-b-2 border-transparent hover:border-black">
             About Us
           </Link>
