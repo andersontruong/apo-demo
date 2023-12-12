@@ -29,7 +29,7 @@ export default function PopupModal({ children, className="", enabled=false, setL
     return (
         <>
             <div onClick={() => {setLoginEnabled(false)}} className={`fixed w-screen h-screen z-40 bg-neutral-100 opacity-50 ${enabled ? 'flex' : 'hidden'}`}></div>
-            <div className={`fixed z-50 ${enabled ? 'flex flex-col' : 'hidden'} ${className}`}>
+            <div className={`fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-50 ${enabled ? 'flex flex-col' : 'hidden'} ${className}`}>
                 <div className="w-full flex justify-end">
                     <button onClick={() => { if (setLoginEnabled) setLoginEnabled(false)}}>
                         <FaXmark className="text-3xl text-neutral-300 hover:text-red-500 transition ease-in-out delay-50 duration-200" />

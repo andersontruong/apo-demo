@@ -1,25 +1,9 @@
 'use client';
 
+import InputField from "@/components/InputField";
 import UserNavbar from "@/components/UserNavbar";
 import { useState } from "react";
 import { FaCircleUser } from "react-icons/fa6";
-
-function InputField({ label, placeholder, setValue=()=>{} }: { label: string, placeholder?: string, setValue?: any }) {
-    const [val, setVal] = useState<string>("");
-    
-    return (
-        <div className="space-y-1 w-full text-sm">
-            <label className="font-medium">{label}</label>
-            <input 
-                type="text" 
-                className="w-full p-2 rounded-xl outline outline-2 outline-neutral-200 focus:outline-blue-200" 
-                value={val}
-                onChange={(e) => { setVal(e.target.value); setValue(e.target.value); }}
-                placeholder={placeholder}
-            />
-        </div>
-    )
-}
 
 export default function Profile() {
     return (

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { Abril_Fatface } from 'next/font/google'
 import PopupModal from './PopupModal';
 import { FaBars } from 'react-icons/fa6';
+import InputField from './InputField';
 
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] });
 
@@ -70,17 +71,11 @@ export default function Navbar() {
           <img className="w-16" src="/Alpha_Phi_Omega.png" />
           <h1 className="text-2xl">Welcome back!</h1>
           <form className="w-full" onSubmit={(e) => { e.preventDefault(); }}>
-              <div className="flex flex-col items-center w-full space-y-4 my-4">
-                <div className="flex flex-col">
-                  <label>Username</label>
-                  <input className="p-2 rounded-lg border-2 border-neutral-200 bg-neutral-100 shadow-md focus:outline-none focus:shadow-lg" type="text"/>
-                </div>
-                <div className="flex flex-col">
-                  <label>Password</label>
-                  <input className="p-2 rounded-lg border-2 border-neutral-200 bg-neutral-100 shadow-md focus:outline-none focus:shadow-lg" type="password"/>
-                </div>
-                <button type="submit" className="rounded-full px-8 py-2 bg-blue-200 hover:bg-blue-300 drop-shadow-xl transition ease-in-out delay-50 duration-200">
-                  <h1 className="text-xl">
+              <div className="flex flex-col items-center w-full space-y-4 my-4 px-2">
+                <InputField label="Username"/>   
+                <InputField label="Password"/>   
+                <button type="submit" className="rounded-full px-8 py-2 bg-blue-800 hover:bg-blue-500 drop-shadow-xl transition ease-in-out delay-50 duration-200">
+                  <h1 className="text-white">
                     Login
                   </h1>
                 </button>
