@@ -64,7 +64,7 @@ export default function Navbar() {
       <PopupModal 
           enabled={loginEnabled}
           setLoginEnabled={setLoginEnabled}
-          className="top-1/4 bg-white w-1/4 h-[50vh] rounded-xl p-4 drop-shadow-2xl"
+          className="my-auto bg-white w-1/4 rounded-xl p-4 drop-shadow-2xl"
       >
         <div className="relative flex w-full h-full flex-col items-center space-y-2">
           <img className="w-16" src="/Alpha_Phi_Omega.png" />
@@ -79,7 +79,7 @@ export default function Navbar() {
                   <label>Password</label>
                   <input className="p-2 rounded-lg border-2 border-neutral-200 bg-neutral-100 shadow-md focus:outline-none focus:shadow-lg" type="password"/>
                 </div>
-                <button type="submit" className="absolute bottom-5 rounded-full px-8 py-2 bg-blue-200 hover:bg-blue-300 drop-shadow-xl transition ease-in-out delay-50 duration-200">
+                <button type="submit" className="rounded-full px-8 py-2 bg-blue-200 hover:bg-blue-300 drop-shadow-xl transition ease-in-out delay-50 duration-200">
                   <h1 className="text-xl">
                     Login
                   </h1>

@@ -38,18 +38,18 @@ export default function Dashboard() {
                 <div className="mt-4 bg-white w-3/4 grow shadow-lg rounded-xl p-4">
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:gap-4 w-full justify-items-center">
                         <EventsWidget
-                            title="Service"
+                            title="Leadership"
                             className="max-w-[200px] w-5/6 sm:w-4/5 md:w-full lg:w-4/5"
                         >
                             <EventEntry 
-                                name="Beach Cleanup" 
-                                date="December 9" 
-                                className="text-center bg-red-200 rounded-lg p-2 w-full hover:outline hover:outline-red-400 hover:outline-2 transition ease-in-out duration-200"
+                                name="PM 9" 
+                                date="December 15" 
+                                className="text-center bg-purple-200 rounded-lg p-2 w-full hover:outline hover:outline-purple-400 hover:outline-2 transition ease-in-out duration-200"
                             />
                             <EventEntry 
-                                name="Westwood Cleanup" 
-                                date="December 9" 
-                                className="text-center bg-red-200 rounded-lg p-2 w-full hover:outline hover:outline-red-400 hover:outline-2 transition ease-in-out duration-200"
+                                name="CM 9" 
+                                date="December 15" 
+                                className="text-center bg-blue-200 rounded-lg p-2 w-full hover:outline hover:outline-blue-400 hover:outline-2 transition ease-in-out duration-200"
                             />
                         </EventsWidget>
                         <EventsWidget
@@ -65,6 +65,21 @@ export default function Dashboard() {
                                 name="Finals Study Session" 
                                 date="December 11" 
                                 className="text-center bg-yellow-200 rounded-lg p-2 w-full hover:outline hover:outline-yellow-500 hover:outline-2 transition ease-in-out duration-200"
+                            />
+                        </EventsWidget>
+                        <EventsWidget
+                            title="Service"
+                            className="max-w-[200px] w-5/6 sm:w-4/5 md:w-full lg:w-4/5"
+                        >
+                            <EventEntry 
+                                name="Beach Cleanup" 
+                                date="December 9" 
+                                className="text-center bg-red-200 rounded-lg p-2 w-full hover:outline hover:outline-red-400 hover:outline-2 transition ease-in-out duration-200"
+                            />
+                            <EventEntry 
+                                name="Westwood Cleanup" 
+                                date="December 9" 
+                                className="text-center bg-red-200 rounded-lg p-2 w-full hover:outline hover:outline-red-400 hover:outline-2 transition ease-in-out duration-200"
                             />
                         </EventsWidget>
                         <EventsWidget
@@ -100,21 +115,6 @@ export default function Dashboard() {
                                 name="POOMTHAI PHIS" 
                                 date="December 15" 
                                 className="text-center bg-orange-200 rounded-lg p-2 w-full hover:outline hover:outline-orange-400 hover:outline-2 transition ease-in-out duration-200"
-                            />
-                        </EventsWidget>
-                        <EventsWidget
-                            title="Leadership/Meetings"
-                            className="max-w-[200px] w-5/6 sm:w-4/5 md:w-full lg:w-4/5"
-                        >
-                            <EventEntry 
-                                name="PM 9" 
-                                date="December 15" 
-                                className="text-center bg-purple-200 rounded-lg p-2 w-full hover:outline hover:outline-purple-400 hover:outline-2 transition ease-in-out duration-200"
-                            />
-                            <EventEntry 
-                                name="CM 9" 
-                                date="December 15" 
-                                className="text-center bg-blue-200 rounded-lg p-2 w-full hover:outline hover:outline-blue-400 hover:outline-2 transition ease-in-out duration-200"
                             />
                         </EventsWidget>
                     </div>
