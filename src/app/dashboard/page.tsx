@@ -119,21 +119,27 @@ function AchievementsWidget() {
                     Pants a Brother!
                 </h1>
             </div>
-            <div className="grow grid grid-cols-3 place-items-end gap-x-4 sm:gap-x-14 xl:gap-x-8 2xl:gap-x-14">
-                <div className="w-full h-[80%] py-4 px-2 sm:p-4 rounded-xl bg-gradient-to-b from-red-500 to-rose-800 drop-shadow-lg">
-                    <h1 className="text-sm sm:text-xl xl:text-base 2xl:text-xl text-center text-white w-full truncate">
-                        Alphas
-                    </h1>
+            <div className="grow grid grid-cols-3 gap-x-4 sm:gap-x-14 xl:gap-x-8 2xl:gap-x-14">
+                <div className="flex flex-col justify-end h-full w-full">
+                    <div className="w-full h-[80%] py-4 px-2 sm:p-4 rounded-xl bg-gradient-to-b from-red-500 to-rose-800 drop-shadow-lg">
+                        <h1 className="text-sm sm:text-xl xl:text-base 2xl:text-xl text-center text-white w-full truncate">
+                            Alphas
+                        </h1>
+                    </div>
                 </div>
-                <div className="w-full h-[100%] py-4 px-2 sm:p-4 rounded-xl bg-gradient-to-b from-amber-500 to-orange-800 drop-shadow-lg">
-                    <h1 className="text-sm sm:text-xl xl:text-base 2xl:text-xl text-center text-white w-full truncate">
-                        Phis
-                    </h1>
+                <div className="flex flex-col justify-end h-full w-full">
+                    <div className="w-full h-[100%] py-4 px-2 sm:p-4 rounded-xl bg-gradient-to-b from-amber-500 to-orange-800 drop-shadow-lg">
+                        <h1 className="text-sm sm:text-xl xl:text-base 2xl:text-xl text-center text-white w-full truncate">
+                            Phis
+                        </h1>
+                    </div>
                 </div>
-                <div className="w-full h-[40%] py-4 px-2 sm:p-4 rounded-xl bg-gradient-to-b from-violet-500 to-purple-800 drop-shadow-lg">
-                    <h1 className="text-sm sm:text-xl xl:text-base 2xl:text-xl text-center text-white w-full truncate">
-                        Omegas
-                    </h1>
+                <div className="flex flex-col justify-end h-full w-full">
+                    <div className="w-full h-[40%] py-4 px-2 sm:p-4 rounded-xl bg-gradient-to-b from-violet-500 to-purple-800 drop-shadow-lg">
+                        <h1 className="text-sm sm:text-xl xl:text-base 2xl:text-xl text-center text-white w-full truncate">
+                            Omegas
+                        </h1>
+                    </div>
                 </div>
             </div>
         </div>
