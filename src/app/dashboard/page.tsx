@@ -110,7 +110,7 @@ function LeaderboardWidget() {
 
 function AchievementsWidget() {
     return (
-        <div className="min-h-[500px] grow flex flex-col space-y-6 items-center bg-white rounded-xl p-6 sm:p-10 drop-shadow-lg">
+        <div className="min-h-[500px] md:grow flex flex-col space-y-6 items-center bg-white rounded-xl p-6 sm:p-10 drop-shadow-lg">
             <div className="flex flex-col">
                 <h1 className="text-xl text-center text-neutral-600 w-full truncate">
                     APO Achievements:
