@@ -81,7 +81,7 @@ export default function CalendarGrid(events: any) {
     }, [events]);
     
     return (
-        <div ref={calendarRef} className="flex flex-col items-center w-full mb-16">
+        <div ref={calendarRef} className="flex flex-col items-center w-full">
             <div className="flex flex-col my-4 w-full">
                 <h1 className="text-xl md:text-2xl text-center">{dateFns.getYear(monthStart)}</h1>
                 <h1 className="text-2xl md:text-4xl text-center">{dateFns.format(monthStart, 'LLLL')}</h1>
@@ -96,19 +96,21 @@ export default function CalendarGrid(events: any) {
             </div>
             <div className="grid grid-cols-7 text-start shadow-xl w-full md:w-4/5">
                 {days.slice(0, 7).map((day, i) => 
-                    <div className={`bg-blue-100 border-neutral-200 border-t-[1px] border-r-[1px] ${i == 0 && 'border-l-[1px]'}`} key={i}>
+                    <div className={`bg-blue-100 border-neutral-200 border-t-[1px] border-r-[1px] py-2 ${i == 0 && 'border-l-[1px]'}`} key={i}>
                         <h1 className="text-center truncate text-xs md:text-base">
                             {dateFns.format(day.date, 'E')}
                         </h1>
                     </div>
                 )}
+            </div>
+            <div className="grid grid-cols-7 auto-rows-fr text-start shadow-xl h-[60vh] w-full md:w-4/5">
                 {days.map((day, i) => 
                     {
                         const eventsOnDay = indexedEvents[day.date.toISOString()];
                         return (
                             <div key={i} 
                                 className={
-                                    `overflow-hidden md:p-2 h-[100px] md:h-[120px]
+                                    `overflow-hidden md:p-2 
                                     ${dateFns.isToday(day.date) ? 'bg-purple-100 z-10 shadow-lg' : day.thisMonth ? 'bg-white' : 'bg-neutral-100'}
                                     border-neutral-200 border-b-[1px] border-r-[1px]
                                     ${i % 7 == 0 && 'border-l-[1px]'}

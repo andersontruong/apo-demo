@@ -18,7 +18,11 @@ function EventsWidget({ title, children, className="" } : { title: string, child
     )
 }
 
-export default function Events({ className }: { className?: string }) {
+interface Props {
+    className?: string
+}
+
+export default function Events({ className }: { className?: string }): React.ReactElement {
     return (
         <div className={`grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:gap-4 w-full justify-items-center ${className}`}>
             <EventsWidget
