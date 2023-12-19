@@ -150,10 +150,13 @@ function DashboardComponent() {
     return (
         <div className="h-full flex flex-col space-y-10">
             <SearchBar className=""/>
-            <div className="flex">
-                <div className="flex flex-col space-y-2">
+            <div className="flex w-full">
+                <div className="flex flex-col sm:flex-row items-center md:space-x-2 justify-center w-full">
                     <h1 className="text-3xl lg:text-4xl">
-                        Welcome back, Poom Yoodee! 👋
+                        Welcome back,
+                    </h1>
+                    <h1 className="text-3xl lg:text-4xl">
+                        Poom Yoodee! 👋
                     </h1>
                 </div>
             </div>
