@@ -180,7 +180,6 @@ export default function Dashboard() {
             <div className="grow min-h-screen bg-indigo-50 p-4 md:p-10 2xl:p-14">
                 <DashboardComponent />
             </div>
-            <MobileNav />
         </main>
     )
 }
