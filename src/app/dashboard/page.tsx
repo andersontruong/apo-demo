@@ -16,7 +16,7 @@ function UpcomingEventsWidget() {
                 Upcoming Events
             </h1>
             <div className="xl:w-full grow flex flex-col space-y-4">
-                <div className="w-full flex flex-col items-center bg-gradient-to-br from-indigo-700 to-blue-800 p-4 rounded-xl drop-shadow-xl hover:cursor-pointer hover:scale-110 transition ease-in-out delay-50 duration-300">
+                <div className="w-full flex flex-col items-center bg-gradient-to-br from-indigo-400 to-blue-800 p-4 rounded-xl drop-shadow-xl hover:cursor-pointer hover:scale-110 transition ease-in-out delay-50 duration-300">
                     <h1 className="w-full text-white truncate">
                         Westwood Trash Pickup
                     </h1>
@@ -177,7 +177,7 @@ export default function Dashboard() {
     return (
         <main className="flex flex-col md:flex-row w-full min-h-screen">
             <SideNav className="bg-white drop-shadow-xl"/>
-            <div className="grow min-h-screen bg-indigo-50 p-10 2xl:p-14">
+            <div className="grow min-h-screen bg-indigo-50 p-4 md:p-10 2xl:p-14">
                 <DashboardComponent />
             </div>
             <MobileNav />
