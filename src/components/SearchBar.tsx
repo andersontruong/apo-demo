@@ -24,12 +24,12 @@ export default function SearchBar({ className }: { className?: string }) {
     }, [time]);
     
     return (
-        <div className={`flex items-center space-x-4 bg-white px-6 rounded-lg drop-shadow-md ${className}`}>
+        <div className={`flex items-center space-x-3 mdspace-x-4 bg-white px-4 md:px-6 rounded-lg drop-shadow-md ${className}`}>
             <div className="text-slate-400 text-lg">
                 <FaMagnifyingGlass/>
             </div>
             <input 
-                className="min-w-0 grow outline-none py-5 text-blue-800 text-lg"
+                className="min-w-0 grow outline-none py-3 md:py-5 text-blue-800 text-lg"
                 placeholder="Search"
             />
             
