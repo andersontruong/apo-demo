@@ -33,7 +33,7 @@ export default function SearchBar({ className }: { className?: string }) {
                 placeholder="Search"
             />
             
-            <h1 className="hidden lg:block text-xl text-end">
+            <h1 className="hidden lg:block text-xl text-end font-mono">
                 {time && dateFns.format(time, 'pp')}
             </h1>
             <div className="hidden lg:block">

@@ -151,7 +151,7 @@ function DashboardComponent() {
         <div className="h-full flex flex-col space-y-10">
             <SearchBar className=""/>
             <div className="flex w-full">
-                <div className="flex flex-col sm:flex-row items-center md:space-x-2 justify-center w-full">
+                <div className="flex flex-col sm:flex-row items-center md:space-x-2 justify-center md:justify-start w-full">
                     <h1 className="text-3xl lg:text-4xl">
                         Welcome back,
                     </h1>
