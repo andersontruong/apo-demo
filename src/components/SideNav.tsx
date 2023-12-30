@@ -25,9 +25,9 @@ export default function SideNav({ className="" } : { className?: string }) {
     const [selectedButton, setSelectedButton] = useState<0|1|2|3|4|5>(0);
     
     return (
-        <nav className={`h-screen sticky top-0 left-0 hidden md:flex flex-col h-full items-center pt-8 pb-14 justify-between ${className}`}>
+        <nav className={`h-screen sticky top-0 left-0 hidden md:flex flex-col h-full items-center pt-8 pb-4 justify-between ${className}`}>
             <div className="flex flex-col items-center w-full space-y-10">
-                <Link className="hover:text-blue-500 flex items-center space-x-1 lg:px-8 -ml-2"  href="/">
+                <Link className="hover:text-blue-500 flex items-center space-x-1 -ml-2"  href="/">
                     <img className="w-8" src="/Alpha_Phi_Omega.png" />
                     <div className="flex flex-col items-center -space-y-2 mt-1">
                         <h1 className={`drop-shadow-xl text-md font-medium transition ease-in-out delay-50 duration-300`}>
