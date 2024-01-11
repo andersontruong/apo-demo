@@ -24,16 +24,16 @@ export default function SearchBar({ className }: { className?: string }) {
     }, [time]);
     
     return (
-        <div className={`flex items-center space-x-3 mdspace-x-4 bg-white px-4 md:px-6 rounded-lg drop-shadow-md ${className}`}>
-            <div className="text-slate-400 text-lg">
+        <div className={`group focus-within:border-indigo-200 flex items-center px-2 space-x-2 border-b-2 w-full transition ease-in-out delay-50 duration-200 ${className ? className : ''}`}>
+            <div className="text-gray-400 text-lg">
                 <FaMagnifyingGlass/>
             </div>
             <input 
-                className="min-w-0 grow outline-none py-3 md:py-5 text-blue-800 text-lg"
+                className="w-full outline-none py-2 bg-transparent text-gray-500 placeholder-gray-400"
                 placeholder="Search"
             />
             
-            <h1 className="hidden lg:block text-xl text-end font-mono">
+            {/* <h1 className="hidden lg:block text-xl text-end font-mono">
                 {time && dateFns.format(time, 'pp')}
             </h1>
             <div className="hidden lg:block">
@@ -48,7 +48,7 @@ export default function SearchBar({ className }: { className?: string }) {
             </div>
             <h1 className="hidden lg:block text-xl text-end">
                 {time && dateFns.format(time, 'PP')}
-            </h1>
+            </h1> */}
         </div>
     )
 }
