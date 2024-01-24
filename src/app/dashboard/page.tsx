@@ -16,7 +16,7 @@ export default function Dashboard() {
     return (
         <main className="flex flex-col md:flex-row w-full min-h-screen">
             <SideNav className="bg-white drop-shadow-xl" setIndex={setIndex}/>
-            {index}
+            {/* {index} */}
             <div className="grow min-h-screen bg-neutral-50 p-4 md:p-4 lg:p-10 2xl:p-14">
                 <DashboardComponent />
                 
