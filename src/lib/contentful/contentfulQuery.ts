@@ -40,7 +40,7 @@ export async function getDocsByField(contentType: string, fields: { [key: string
 }
 
 export async function getDB() {
-    return (await cmaClient.getSpace(process.env.SPACE_ID)).getEnvironment('master');
+    return (await cmaClient.getSpace(process.env.NEXT_PUBLIC_SPACE_ID)).getEnvironment('master');
 }
 
 export async function createDoc(contentType: string, fields: Object) {

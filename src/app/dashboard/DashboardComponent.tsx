@@ -41,14 +41,14 @@ function LeaderboardWidget({ className="" }: { className?: string }) {
                     </div>
                     <div className="relative flex flex-col w-full">
                         <div className="flex absolute w-full h-full rounded-lg bg-gray-400 overflow-hidden">
-                            <span className="w-[5%] h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
+                            <span className="w-[1%] h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
                         </div>
                         <div className="w-full flex justify-between">
                             <h1 className="text-white z-10 pl-4 py-4 truncate">
                                 Thomas Ho
                             </h1>
                             <h1 className="text-white z-10 pr-4 py-4">
-                                10
+                                0.5
                             </h1>
                         </div>
                     </div>
@@ -61,36 +61,36 @@ function LeaderboardWidget({ className="" }: { className?: string }) {
                         </div>
                         <div className="w-full flex justify-between">
                             <h1 className="text-white z-10 pl-4 py-4 truncate">
-                                Lucy Yin
+                                Star Yu
                             </h1>
                             <h1 className="text-white z-10 pr-4 py-4">
-                                200
+                                100000 BTC
                             </h1>
                         </div>
                     </div>
                     <div className="relative flex flex-col w-full">
                         <div className="flex absolute w-full h-full rounded-lg bg-gray-400 overflow-hidden">
-                            <span className="w-[60%] h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
+                            <span className="w-[25%] h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
                         </div>
                         <div className="w-full flex justify-between">
                             <h1 className="text-white z-10 pl-4 py-4 truncate">
-                                Joseph Ramirez
+                                Paul Torres
                             </h1>
                             <h1 className="text-white z-10 pr-4 py-4">
-                                120
+                                $1 trillion
                             </h1>
                         </div>
                     </div>
                     <div className="relative flex flex-col w-full">
                         <div className="flex absolute w-full h-full rounded-lg bg-gray-400 overflow-hidden">
-                            <span className="w-[5%] h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
+                            <span className="w-[0%] h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
                         </div>
                         <div className="w-full flex justify-between">
                             <h1 className="text-white z-10 pl-4 py-4 truncate">
-                                Thomas Ho
+                                Smelliot Lin
                             </h1>
                             <h1 className="text-white z-10 pr-4 py-4">
-                                10
+                                -$50
                             </h1>
                         </div>
                     </div>
@@ -99,14 +99,27 @@ function LeaderboardWidget({ className="" }: { className?: string }) {
                     <h1 className="text-gray-500">APO Achievements</h1>
                     <div className="relative flex flex-col w-full">
                         <div className="z-0 flex absolute w-full h-full rounded-lg bg-gray-400 overflow-hidden">
+                            <span className="w-[80%] h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
+                        </div>
+                        <div className="w-full flex justify-between">
+                            <h1 className="text-white z-10 pl-4 py-4 truncate">
+                                Alphas
+                            </h1>
+                            <h1 className="text-white z-10 pr-4 py-4">
+                                400
+                            </h1>
+                        </div>
+                    </div>
+                    <div className="relative flex flex-col w-full">
+                        <div className="flex absolute w-full h-full rounded-lg bg-gray-400 overflow-hidden">
                             <span className="w-full h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
                         </div>
                         <div className="w-full flex justify-between">
                             <h1 className="text-white z-10 pl-4 py-4 truncate">
-                                Lucy Yin
+                                Phis
                             </h1>
                             <h1 className="text-white z-10 pr-4 py-4">
-                                200
+                                500
                             </h1>
                         </div>
                     </div>
@@ -116,23 +129,10 @@ function LeaderboardWidget({ className="" }: { className?: string }) {
                         </div>
                         <div className="w-full flex justify-between">
                             <h1 className="text-white z-10 pl-4 py-4 truncate">
-                                Joseph Ramirez
+                                Omegas
                             </h1>
                             <h1 className="text-white z-10 pr-4 py-4">
-                                120
-                            </h1>
-                        </div>
-                    </div>
-                    <div className="relative flex flex-col w-full">
-                        <div className="flex absolute w-full h-full rounded-lg bg-gray-400 overflow-hidden">
-                            <span className="w-[5%] h-full bg-gradient-to-br from-gray-500 to-gray-600 drop-shadow-lg"></span>
-                        </div>
-                        <div className="w-full flex justify-between">
-                            <h1 className="text-white z-10 pl-4 py-4 truncate">
-                                Thomas Ho
-                            </h1>
-                            <h1 className="text-white z-10 pr-4 py-4">
-                                10
+                                300
                             </h1>
                         </div>
                     </div>
