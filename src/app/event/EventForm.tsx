@@ -26,6 +26,15 @@ import { Calendar } from "@/components/ui/calendar"
 import React from "react"
 import { TimePickerDemo } from "@/components/time-picker/time-picker-demo"
 import { createDoc } from "@/lib/contentful/contentfulQuery"
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+  } from "@/components/ui/dialog"
+  
 
 const formSchema = z.object({
     eventName: z.string().min(2, { message: "Event name must be at least 2 characters."}).max(100),
@@ -96,26 +105,32 @@ export default function EventForm() {
                 render={({ field }) => (
                     <FormItem className="flex flex-col">
                     <FormLabel>Starting Date</FormLabel>
-                    <Popover>
-                        <PopoverTrigger asChild>
-                        <FormControl>
+                    <Dialog>
+                        <DialogTrigger asChild>
+                            <FormControl>
                             <Button
-                            variant={"outline"}
-                            className={cn(
-                                "w-[260px] pl-3 text-left font-normal",
-                                !field.value && "text-muted-foreground"
-                            )}
+                                variant={"outline"}
+                                className={cn(
+                                    "w-[260px] pl-3 text-left font-normal",
+                                    !field.value && "text-muted-foreground"
+                                )}
                             >
-                            {field.value ? (
-                                format(field.value, "PPPp")
-                            ) : (
-                                <span>Pick a date</span>
-                            )}
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                                {field.value ? (
+                                    format(field.value, "PPPp")
+                                ) : (
+                                    <span>Pick a date</span>
+                                )}
+                                <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                             </Button>
-                        </FormControl>
-                        </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0" align="start">
+                        </FormControl></DialogTrigger>
+                        <DialogContent className="justify-center">
+                            {/* <DialogHeader>
+                            <DialogTitle>Are you absolutely sure?</DialogTitle>
+                            <DialogDescription>
+                                This action cannot be undone. This will permanently delete your account
+                                and remove your data from our servers.
+                            </DialogDescription>
+                            </DialogHeader> */}
                             <Calendar
                                 mode="single"
                                 selected={field.value}
@@ -128,8 +143,17 @@ export default function EventForm() {
                             <div className="p-3 border-t border-border">
                                 <TimePickerDemo setDate={field.onChange} date={field.value} />
                             </div>
+                        </DialogContent>
+                    </Dialog>
+
+                    {/* <Popover>
+                        <PopoverTrigger asChild>
+                        
+                        </PopoverTrigger>
+                        <PopoverContent className="w-auto p-0" align="start">
+                            
                         </PopoverContent>
-                    </Popover>
+                    </Popover> */}
                     {/* <FormDescription>
                         Your date of birth is used to calculate your age.
                     </FormDescription> */}
