@@ -41,18 +41,7 @@ export default function CalendarGrid(events: any) {
         setCalendarStart(dateFns.addDays(mStart, -parseInt(dateFns.format(mStart, "i"))));
         setMonthEnd(mEnd);
         setCalendarEnd(dateFns.addDays(mEnd, 7 - parseInt(dateFns.format(mEnd, "i"))));
-    }
 
-    useEffect(() => {
-        const mStart = dateFns.startOfMonth(dateFns.startOfDay(new Date()));
-        const mEnd = dateFns.lastDayOfMonth(mStart);
-        setMonthStart(mStart);
-        setMonthEnd(mEnd);
-        setCalendarStart(dateFns.addDays(mStart, -parseInt(dateFns.format(mStart, "i"))));
-        setCalendarEnd(dateFns.addDays(mEnd, 7 - parseInt(dateFns.format(mEnd, "i"))));
-    }, []);
-    
-    useEffect(() => {
         console.log(calendarStart, monthStart, calendarEnd);
         if (calendarStart.getTime() <= monthStart.getTime() && calendarStart.getTime() < calendarEnd.getTime()) {
             let day = calendarStart;
@@ -67,6 +56,34 @@ export default function CalendarGrid(events: any) {
             
             setDays(dayArray);
         }
+    }
+
+    useEffect(() => {
+        const mStart = dateFns.startOfMonth(dateFns.startOfDay(new Date()));
+        const mEnd = dateFns.lastDayOfMonth(mStart);
+        setMonthStart(mStart);
+        setMonthEnd(mEnd);
+        setCalendarStart(dateFns.addDays(mStart, -parseInt(dateFns.format(mStart, "i"))));
+        setCalendarEnd(dateFns.addDays(mEnd, 7 - parseInt(dateFns.format(mEnd, "i"))));
+
+        console.log(calendarStart, monthStart, calendarEnd);
+        if (calendarStart.getTime() <= monthStart.getTime() && calendarStart.getTime() < calendarEnd.getTime()) {
+            let day = calendarStart;
+            const dayArray: Array<CalendarDate> = [];
+            console.log('date start')
+            do {
+                dayArray.push({ date: day, thisMonth: dateFns.isSameMonth(day, monthStart)})
+                day = dateFns.addDays(day, 1);
+                console.log('hi')
+            }
+            while (!dateFns.isSameDay(day, calendarEnd));
+            
+            setDays(dayArray);
+        }
+    }, []);
+    
+    useEffect(() => {
+        
     }, [monthStart, calendarStart, calendarEnd]);
 
     useEffect(() => {
