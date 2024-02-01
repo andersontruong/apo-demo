@@ -102,7 +102,6 @@ export default function CalendarGrid(events: any) {
     
     return (
         <div ref={calendarRef} className="flex flex-col items-center w-full">
-            {JSON.stringify(days)}
             <div className="flex flex-col my-4 w-full">
                 <h1 className="text-xl md:text-2xl text-center">{dateFns.getYear(monthStart)}</h1>
                 <h1 className="text-2xl md:text-4xl text-center">{dateFns.format(monthStart, 'LLLL')}</h1>
