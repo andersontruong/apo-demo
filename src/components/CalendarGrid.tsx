@@ -53,6 +53,7 @@ export default function CalendarGrid(events: any) {
     }, []);
     
     useEffect(() => {
+        console.log(calendarStart, monthStart, calendarEnd);
         if (calendarStart.getTime() <= monthStart.getTime() && calendarStart.getTime() < calendarEnd.getTime()) {
             let day = calendarStart;
             const dayArray: Array<CalendarDate> = [];
