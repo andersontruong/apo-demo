@@ -33,6 +33,8 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
+    DialogFooter,
+    DialogClose
   } from "@/components/ui/dialog"
   
 
@@ -47,6 +49,7 @@ const formSchema = z.object({
 })
 
 export default function EventForm() {
+    const [successDialogOpen, setSuccessDialogOpen] = React.useState<boolean>(false);
     const [date, setDate] = React.useState<Date>();
     // 1. Define your form.
     const form = useForm<z.infer<typeof formSchema>>({
@@ -78,10 +81,28 @@ export default function EventForm() {
         })
         .then(()=> console.log(values))
         .catch(e => console.log(e));
+        setSuccessDialogOpen(true);
     }
     
     return (
         <Form {...form}>
+            <Dialog open={successDialogOpen} onOpenChange={setSuccessDialogOpen}>
+                <DialogContent className="sm:max-w-xs">
+                    <DialogHeader className="items-center">
+                    <DialogTitle>Requested Event!</DialogTitle>
+                    <DialogDescription>
+                        Your event is now waiting for review.
+                    </DialogDescription>
+                    </DialogHeader>
+                    <DialogFooter className="sm:justify-center">
+                        <DialogClose asChild>
+                            <Button type="button" variant="destructive">
+                            Close
+                            </Button>
+                        </DialogClose>
+                    </DialogFooter>
+                </DialogContent>
+                </Dialog>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
                 control={form.control}
