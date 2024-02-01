@@ -18,10 +18,10 @@ const EVENT_STYLE = {
 export default function CalendarGrid(events: any) {
     const [days, setDays] = useState<Array<CalendarDate>>([]);
     const [indexedEvents, setIndexedEvents] = useState<any>();
-    const [monthStart, setMonthStart] = useState<Date>(new Date());
-    const [calendarStart, setCalendarStart] = useState<Date>(new Date());
-    const [monthEnd, setMonthEnd] = useState<Date>(new Date());
-    const [calendarEnd, setCalendarEnd] = useState<Date>(new Date());
+    const [monthStart, setMonthStart] = useState<Date>(dateFns.startOfDay(new Date()));
+    const [calendarStart, setCalendarStart] = useState<Date>(dateFns.startOfDay(new Date()));
+    const [monthEnd, setMonthEnd] = useState<Date>(dateFns.startOfDay(new Date()));
+    const [calendarEnd, setCalendarEnd] = useState<Date>(dateFns.startOfDay(new Date()));
     const calendarRef = useRef<any>(null);
 
     const shiftMonth = (months) => {
@@ -44,7 +44,7 @@ export default function CalendarGrid(events: any) {
     }
 
     useEffect(() => {
-        const mStart = dateFns.startOfMonth(new Date());
+        const mStart = dateFns.startOfMonth(dateFns.startOfDay(new Date()));
         const mEnd = dateFns.lastDayOfMonth(mStart);
         setMonthStart(mStart);
         setMonthEnd(mEnd);
@@ -82,7 +82,7 @@ export default function CalendarGrid(events: any) {
     
     return (
         <div ref={calendarRef} className="flex flex-col items-center w-full">
-            {JSON.stringify(events)}
+            {JSON.stringify(days)}
             <div className="flex flex-col my-4 w-full">
                 <h1 className="text-xl md:text-2xl text-center">{dateFns.getYear(monthStart)}</h1>
                 <h1 className="text-2xl md:text-4xl text-center">{dateFns.format(monthStart, 'LLLL')}</h1>
