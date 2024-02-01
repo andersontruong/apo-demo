@@ -56,9 +56,11 @@ export default function CalendarGrid(events: any) {
         if (calendarStart.getTime() <= monthStart.getTime() && calendarStart.getTime() < calendarEnd.getTime()) {
             let day = calendarStart;
             const dayArray: Array<CalendarDate> = [];
+            console.log('date start')
             do {
                 dayArray.push({ date: day, thisMonth: dateFns.isSameMonth(day, monthStart)})
                 day = dateFns.addDays(day, 1);
+                console.log('hi')
             }
             while (!dateFns.isSameDay(day, calendarEnd));
             
