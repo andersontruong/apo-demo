@@ -18,10 +18,10 @@ const EVENT_STYLE = {
 export default function CalendarGrid(events: any) {
     const [days, setDays] = useState<Array<CalendarDate>>([]);
     const [indexedEvents, setIndexedEvents] = useState<any>();
-    const [monthStart, setMonthStart] = useState<Date>(dateFns.startOfDay(new Date()));
-    const [calendarStart, setCalendarStart] = useState<Date>(dateFns.startOfDay(new Date()));
-    const [monthEnd, setMonthEnd] = useState<Date>(dateFns.startOfDay(new Date()));
-    const [calendarEnd, setCalendarEnd] = useState<Date>(dateFns.startOfDay(new Date()));
+    const [monthStart, setMonthStart] = useState<Date>(new Date());
+    const [calendarStart, setCalendarStart] = useState<Date>(new Date());
+    const [monthEnd, setMonthEnd] = useState<Date>(new Date());
+    const [calendarEnd, setCalendarEnd] = useState<Date>(new Date());
     const calendarRef = useRef<any>(null);
 
     const shiftMonth = (months) => {
@@ -41,49 +41,29 @@ export default function CalendarGrid(events: any) {
         setCalendarStart(dateFns.addDays(mStart, -parseInt(dateFns.format(mStart, "i"))));
         setMonthEnd(mEnd);
         setCalendarEnd(dateFns.addDays(mEnd, 7 - parseInt(dateFns.format(mEnd, "i"))));
-
-        console.log(calendarStart, monthStart, calendarEnd);
-        if (calendarStart.getTime() <= monthStart.getTime() && calendarStart.getTime() < calendarEnd.getTime()) {
-            let day = calendarStart;
-            const dayArray: Array<CalendarDate> = [];
-            console.log('date start')
-            do {
-                dayArray.push({ date: day, thisMonth: dateFns.isSameMonth(day, monthStart)})
-                day = dateFns.addDays(day, 1);
-                console.log('hi')
-            }
-            while (!dateFns.isSameDay(day, calendarEnd));
-            
-            setDays(dayArray);
-        }
     }
 
     useEffect(() => {
-        const mStart = dateFns.startOfMonth(dateFns.startOfDay(new Date()));
+        const mStart = dateFns.startOfMonth(new Date());
         const mEnd = dateFns.lastDayOfMonth(mStart);
         setMonthStart(mStart);
         setMonthEnd(mEnd);
         setCalendarStart(dateFns.addDays(mStart, -parseInt(dateFns.format(mStart, "i"))));
         setCalendarEnd(dateFns.addDays(mEnd, 7 - parseInt(dateFns.format(mEnd, "i"))));
-
-        console.log(calendarStart, monthStart, calendarEnd);
+    }, []);
+    
+    useEffect(() => {
         if (calendarStart.getTime() <= monthStart.getTime() && calendarStart.getTime() < calendarEnd.getTime()) {
             let day = calendarStart;
             const dayArray: Array<CalendarDate> = [];
-            console.log('date start')
             do {
                 dayArray.push({ date: day, thisMonth: dateFns.isSameMonth(day, monthStart)})
                 day = dateFns.addDays(day, 1);
-                console.log('hi')
             }
             while (!dateFns.isSameDay(day, calendarEnd));
             
             setDays(dayArray);
         }
-    }, []);
-    
-    useEffect(() => {
-        
     }, [monthStart, calendarStart, calendarEnd]);
 
     useEffect(() => {
